@@ -8,7 +8,7 @@ interface AdminLoginPayload {
 
 @Injectable({ providedIn: 'root' })
 export class AdminServise {
-  private baseUrl = 'https://your-fastapi-app.onrender.com/admin';
+  private baseUrl = 'https://fullstack-1-1-ohld.onrender.com/admin';
   private http = inject(HttpClient);
 
   adminlogin(payload: AdminLoginPayload) {

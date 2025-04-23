@@ -27,7 +27,7 @@ interface ProfileUpdatePayload {
   providedIn: 'root',
 })
 export class UserService {
-  private baseUrl = 'https://your-fastapi-app.onrender.com/auth';
+  private baseUrl = 'https://fullstack-1-1-ohld.onrender.com/auth';
 
   constructor(private http: HttpClient) {}
 
