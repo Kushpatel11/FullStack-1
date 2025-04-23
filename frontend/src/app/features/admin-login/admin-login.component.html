@@ -1,0 +1,110 @@
+<div class="container login-container">
+  <div class="row w-100 justify-content-center">
+    <div class="col-lg-10 card">
+      <div class="row g-0">
+        <!-- Form Section -->
+        <div class="col-md-6 form-section">
+          <h2 class="mb-4">Admin Login</h2>
+          <form (ngSubmit)="onAdminSubmit()" #adminLoginForm="ngForm">
+            <div class="mb-3">
+              <label for="adminEmail" class="form-label">Email</label>
+              <input
+                type="text"
+                id="adminEmail"
+                class="form-control"
+                placeholder="Enter admin email"
+                name="adminEmail"
+                required
+                [(ngModel)]="adminEmail"
+              />
+              @if (isSubmitted()) {
+              <div class="invalid-feedback d-block">
+                Please enter your admin username.
+              </div>
+              }
+            </div>
+
+            <div class="mb-3 position-relative">
+              <label for="adminPassword" class="form-label">Password</label>
+              <input
+                id="adminPassword"
+                class="form-control"
+                placeholder="Enter admin password"
+                name="adminPassword"
+                required
+                [type]="showPassword() ? 'text' : 'password'"
+                [(ngModel)]="adminPassword"
+              />
+              <span class="toggle-password" (click)="togglePassword()">👁️</span>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="adminRememberMe"
+                name="adminRememberMe"
+                [(ngModel)]="adminRememberMe"
+              />
+              <label class="form-check-label" for="adminRememberMe"
+                >Remember me</label
+              >
+            </div>
+
+            <div class="mb-3 text-end">
+              <a class="text-decoration-none">Reset admin credentials</a>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary w-100"
+              [disabled]="!adminLoginForm.valid"
+            >
+              Admin Login
+            </button>
+
+            <div class="or-divider">— OR —</div>
+
+            <div class="security-code-section">
+              <div class="mb-3">
+                <label for="securityCode" class="form-label"
+                  >Security Code</label
+                >
+                <input
+                  type="text"
+                  id="securityCode"
+                  class="form-control"
+                  placeholder="Enter security code"
+                  name="securityCode"
+                />
+              </div>
+              <button type="button" class="btn btn-secondary w-100">
+                Verify Code
+              </button>
+            </div>
+          </form>
+          <p class="text-center mt-3">
+            <a [routerLink]="['/login']" class="text-decoration-none"
+              >Back to user login</a
+            >
+          </p>
+        </div>
+
+        <!-- Info Section -->
+        <div
+          class="col-md-6 info-section d-none d-md-flex flex-column justify-content-center align-items-center"
+        >
+          <div>
+            <h3>Admin Portal</h3>
+            <img src="admin-login.png" alt="Admin Login Image" />
+            <p class="mt-3">Admin Dashboard for Angular Auth App</p>
+            <p>User Management: View, edit, and delete users</p>
+            <p>Analytics: Monitor login activity and usage</p>
+            <p>System Settings: Configure app parameters</p>
+            <p>Access Controls: Manage roles and permissions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

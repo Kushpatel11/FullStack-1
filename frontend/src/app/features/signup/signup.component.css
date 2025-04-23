@@ -1,0 +1,79 @@
+/* Prevent horizontal scroll and fit viewport */
+.signup-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* Force no scroll leaks */
+.signup-wrapper, .signup-card {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Signup card styling */
+.signup-card {
+  width: 100%;
+  max-width: 960px;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Form styling */
+.form-section {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+/* Info section styling */
+.info-section {
+  background-color: #212529;
+  color: white;
+  padding: 2rem;
+  overflow: hidden;
+}
+.info-section img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+/* Eye icon styling */
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 38px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Social buttons */
+.btn-google {
+  background-color: #db4437;
+  color: white;
+}
+.btn-google:hover {
+  background-color: #c1351d;
+  transform: translateY(-1px);
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+  color: white;
+}
+.btn-facebook:hover {
+  background-color: #2d4373;
+  transform: translateY(-1px);
+}
+
+.or-divider {
+  text-align: center;
+  margin: 1rem 0;
+  color: #6c757d;
+}

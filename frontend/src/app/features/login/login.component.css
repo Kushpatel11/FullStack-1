@@ -1,0 +1,102 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-section {
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.info-section {
+  background-color: #212529;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.info-section img {
+  width: 100%;
+  max-width: 200px;
+  margin: 1rem auto;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 35px;
+  cursor: pointer;
+  color: #666;
+}
+
+.social-login .btn {
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-google {
+  background-color: #db4437;
+  color: white;
+}
+
+.btn-google:hover {
+  background-color: #c1351d;
+  box-shadow: 0 0 10px rgba(219, 68, 55, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.btn-facebook:hover {
+  background-color: #2d4373;
+  box-shadow: 0 0 10px rgba(59, 89, 152, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.or-divider {
+  text-align: center;
+  margin: 1rem 0;
+  color: #6c757d;
+}
+
+.password-strength {
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.password-strength.weak {
+  color: red;
+}
+
+.password-strength.medium {
+  color: orange;
+}
+
+.password-strength.strong {
+  color: green;
+}
+
+@media (max-width: 767px) {
+  .info-section {
+    display: none;
+  }
+}

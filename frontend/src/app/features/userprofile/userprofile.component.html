@@ -1,0 +1,77 @@
+<!-- Sidebar -->
+<div class="sidebar">
+  <h4 class="text-center">User Panel</h4>
+  <a>🏠 Dashboard</a>
+  <a>👤 Profile</a>
+
+  <a (click)="logOut()">🚪 Logout</a>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="top-bar">
+    <h3>User Profile</h3>
+    <div>
+      <label class="form-check-label me-2">Dark Mode</label>
+      <input
+        class="form-check-input"
+        type="checkbox"
+        (change)="toggleDarkMode()"
+        [checked]="isDarkMode"
+      />
+    </div>
+  </div>
+
+  <div class="profile-card text-center">
+    <!-- Profile Image (click to select) -->
+    <img
+      [src]="profilePhoto() || 'default.jpg'"
+      alt="Profile"
+      class="profile-img mb-3"
+      style="cursor: pointer"
+      (click)="triggerFileInput()"
+    />
+
+    <!-- Hidden File Input -->
+    <input
+      type="file"
+      id="fileInput"
+      accept="image/*"
+      style="display: none"
+      (change)="onFileChange($event)"
+    />
+
+    <h4>{{ fullname() }}</h4>
+    <form
+      [formGroup]="form()"
+      class="mt-4 text-start"
+      (ngSubmit)="onUpdateProfile()"
+    >
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">First Name</label>
+          <input type="text" class="form-control" formControlName="firstName" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Last Name</label>
+          <input type="text" class="form-control" formControlName="lastName" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" formControlName="email" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Mobile</label>
+          <input type="text" class="form-control" formControlName="mobile" />
+        </div>
+      </div>
+
+      <div class="mt-4 d-flex justify-content-between">
+        <button type="submit" class="btn btn-success">Update Profile</button>
+        <button type="button" class="btn btn-danger" (click)="deleteAcc()">
+          Delete Account
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

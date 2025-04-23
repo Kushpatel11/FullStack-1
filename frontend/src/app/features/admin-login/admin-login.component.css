@@ -1,0 +1,102 @@
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+  }
+  
+  .form-section {
+    padding: 40px;
+  }
+  
+  .info-section {
+    background-color: #f8f9fa;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .info-section img {
+    max-width: 80%;
+    margin: 20px auto;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 38px;
+    cursor: pointer;
+  }
+  
+  .or-divider {
+    text-align: center;
+    margin: 20px 0;
+    color: #6c757d;
+  }
+  
+  .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    padding: 10px;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-google, .btn-facebook {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .btn-google {
+    background-color: #ea4335;
+    border-color: #ea4335;
+    color: white;
+  }
+  
+  .btn-facebook {
+    background-color: #3b5998;
+    border-color: #3b5998;
+    color: white;
+  }
+  
+  .security-code-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* For error message display */
+  .error-message {
+    color: #dc3545;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  /* Loading indicator styles */
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #0d6efd;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
