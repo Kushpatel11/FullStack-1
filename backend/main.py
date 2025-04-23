@@ -20,7 +20,9 @@ app = FastAPI()
 # CORS middleware for Angular frontend (local dev)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Only during development
+    allow_origins=[
+        "https://demo-auth-frontend-1.vercel.app"
+    ],  # Only during development
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
